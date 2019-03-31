@@ -1,0 +1,42 @@
+.mainMenu {
+    font-family: 'Grold', 'Impact', 'Charcoal', sans-serif;
+    font-size: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0.5rem 0;
+    padding: 0;
+}
+
+.mainMenu__item {
+    display: inline;
+    margin: 0.5rem 0;
+}
+
+.mainMenu__link {
+    color:#181818;
+    text-decoration: none;
+}
+
+.mainMenu__button {
+    font-family: 'Grold', 'Impact', 'Charcoal', sans-serif;
+    font-weight: normal;
+    font-size: 2rem;
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 23px;
+    background: none;
+    border: none;
+}
+
+@media only screen and (min-width: 700px) {
+    .mainMenu {
+        flex-direction: row;
+    }
+
+    .mainMenu__button {
+        display: none;
+    }
+}

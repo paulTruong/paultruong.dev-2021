@@ -1,0 +1,9 @@
+.logo {
+    padding: 15px 20px;
+}
+
+.logo__link {
+    font-family: 'Grold', 'Impact', 'Charcoal', sans-serif;
+    font-size: 2rem;
+    color: black;
+}
