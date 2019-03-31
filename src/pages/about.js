@@ -6,9 +6,6 @@ import { graphql } from "gatsby";
 const About = ( {data} ) => (
   <Layout>
     <SEO title="About me" keywords={[`gatsby`, `application`, `react`]} />
-    {
-      console.log(data.allWordpressPage.edges[0].node)
-    }
     <h2>{data.allWordpressPage.edges[0].node.title}</h2>
 
     <div dangerouslySetInnerHTML={{__html: data.allWordpressPage.edges[0].node.content}}>
