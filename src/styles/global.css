@@ -1,36 +1,42 @@
 /* @import url('https://fonts.googleapis.com/css?family=Merriweather:400,400i,700'); */
-@import url('https://fonts.googleapis.com/css?family=Ubuntu:400,700');
+@import url("https://fonts.googleapis.com/css?family=Ubuntu:400,700");
 @font-face {
-    font-family: 'Grold';
-    src: url('../../src/fonts/Grold Regular/Grold-Regular.woff') format('woff'),
-    url('../../src/fonts/Grold Regular/Grold-Regular.ttf') format('truetype');
-    font-style: normal;
-    font-weight: normal;
+  font-family: "Grold";
+  src: url("../../src/fonts/Grold Regular/Grold-Regular.woff") format("woff"),
+    url("../../src/fonts/Grold Regular/Grold-Regular.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
 }
 
 @font-face {
-    font-family: 'Grold';
-    src: url('../../src/fonts/Grold Bold/Grold-Bold.woff') format('woff'),
-    url('../../src/fonts/Grold Bold/Grold-Bold.ttf') format('truetype');
-    font-style: normal;
-    font-weight: bold;
+  font-family: "Grold";
+  src: url("../../src/fonts/Grold Bold/Grold-Bold.woff") format("woff"),
+    url("../../src/fonts/Grold Bold/Grold-Bold.ttf") format("truetype");
+  font-style: normal;
+  font-weight: bold;
+}
+
+* {
+  box-sizing: border-box;
 }
 
 html {
-    font-family: 'Ubuntu', "Times New Roman", Times, serif;
-    font-size: 100%;
-    font-size: 1rem;
-    line-height: 1.5;
+  font-family: "Ubuntu", "Times New Roman", Times, serif;
+  font-size: 100%;
+  font-size: 1rem;
+  line-height: 1.5;
 }
 
 body {
-    margin: 0;
+  margin: 0;
+  font-weight: 400;
+  color: #333;
+  background-color: #fffcfc;
+  background-image: url("../../src/images/natural-paper.png");
 }
 
 main {
-    padding: 0 1.5rem;
-    max-width: 700px;
-    margin: auto;
+  margin: auto;
 }
 
 h1,
@@ -39,19 +45,53 @@ h3,
 h4,
 h5,
 h6 {
-    font-family: 'Grold', 'Impact', 'Charcoal', sans-serif;
-    line-height: 1;
+  font-family: "Grold", "Impact", "Charcoal", sans-serif;
+  line-height: 1.15;
+  letter-spacing: -1.5px;
+  margin-bottom: 0;
 }
 
+img {
+  width: 100%;
+  height: auto;
+}
+
+p {
+  margin-bottom: 1.25rem;
+}
 
 h1 {
-    font-size: 3rem;
+  margin-top: 0;
+  font-size: 4.209rem;
 }
 
 h2 {
-    font-size: 2.5rem;
+  font-size: 3.157rem;
 }
 
 h3 {
-    font-size: 2rem;
+  font-size: 2.369rem;
+}
+
+h4 {
+  font-size: 1.777rem;
+}
+
+h5 {
+  font-size: 1.333rem;
+}
+
+small,
+.text_small {
+  font-size: 0.75em;
+}
+
+@media only screen and (min-width: 700px) {
+  body {
+    font-size: 1.333rem;
+  }
+
+  main {
+    padding: 0;
+  }
 }

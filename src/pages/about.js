@@ -17,7 +17,7 @@ export default About
 
 export const query = graphql`
   query {
-    allWordpressPage(filter: {id: {eq: "89d77f07-f9a7-5797-9c80-f17b4baf9e22"}}) {
+    allWordpressPage(filter: {slug: {eq: "about-me"}}) {
       edges {
         node {
           id

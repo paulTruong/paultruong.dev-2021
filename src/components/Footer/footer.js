@@ -18,10 +18,11 @@ class Footer extends React.Component {
                             <Link className={footerStyles.footerMenu__link} to="/writing">Writing</Link>
                         </li>
                         <li className={footerStyles.footerMenu__item}>
-                            <Link className={footerStyles.footerMenu__link} to="/">Contact</Link>
+                            <Link className={footerStyles.footerMenu__link} to="//#contact">Contact</Link>
                         </li>
                     </ul>
                 </nav>
+                <p className={footerStyles.footer__text}>Built in Gatsby and Wordpress</p>
             </footer>
         )
     }

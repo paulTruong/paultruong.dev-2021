@@ -10,3 +10,6 @@
     white-space: nowrap;
 }
 
+.highlight {
+    color:hsl(28, 100%, 58%);
+}
