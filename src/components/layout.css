@@ -1,5 +1,5 @@
 .page {
-  padding: 1.5rem 6rem;
+  padding: 1.5rem 1rem;
   max-width: 1500px;
   margin: auto;
 }
@@ -10,5 +10,8 @@
       grid-template-columns: repeat(2, 1fr);
       grid-column-gap: 5%;
     }
+  }
+  .page {
+    padding: 1.5rem 3rem;
   }
 }
