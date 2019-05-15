@@ -4,7 +4,7 @@ import SEO from "../components/seo"
 import { Link, graphql } from "gatsby"
 import styles from "../pages/styles/writing.module.css"
 
-const Writing = ({ data }) => (
+const Blog = ({ data }) => (
   <Layout mainClass={styles.main_writing}>
     <SEO title="About me" keywords={[`gatsby`, `application`, `react`]} />
     {
@@ -24,7 +24,7 @@ const Writing = ({ data }) => (
   </Layout>
 )
 
-export default Writing
+export default Blog
 
 export const query = graphql`
   query {

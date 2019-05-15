@@ -19,8 +19,8 @@ class MainMenu extends React.Component {
                 </Link>
           </li>
           <li className={mainMenuStyles.mainMenu__item}>
-            <Link className={mainMenuStyles.mainMenu__link} to="/writing">
-              Writing
+            <Link className={mainMenuStyles.mainMenu__link} to="/blog">
+              Blog
                 </Link>
           </li>
           <li className={mainMenuStyles.mainMenu__item}>

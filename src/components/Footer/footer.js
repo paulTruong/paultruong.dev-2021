@@ -15,10 +15,10 @@ class Footer extends React.Component {
                             <Link className={footerStyles.footerMenu__link} to="/about">About</Link>
                         </li>
                         <li className={footerStyles.footerMenu__item}>
-                            <Link className={footerStyles.footerMenu__link} to="/writing">Writing</Link>
+                            <Link className={footerStyles.footerMenu__link} to="/blog">Blog</Link>
                         </li>
                         <li className={footerStyles.footerMenu__item}>
-                            <Link className={footerStyles.footerMenu__link} to="//#contact">Contact</Link>
+                            <Link className={footerStyles.footerMenu__link} to="/#contact">Contact</Link>
                         </li>
                     </ul>
                 </nav>
