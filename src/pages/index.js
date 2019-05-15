@@ -4,7 +4,6 @@ import SEO from "../components/seo"
 import { graphql } from "gatsby";
 import ServiceBlock from "../components/Services/ServiceBlock";
 import ContactForm from "../components/Forms/Contact/ContactForm"
-import Honeypot from "../components/Forms/Contact/Honeypot"
 import indexStyles from "./styles/index.module.css";
 // import Img from "gatsby-image";
 

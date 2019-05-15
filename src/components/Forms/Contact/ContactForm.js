@@ -4,7 +4,7 @@ import styles from "./ContactForm.module.css"
 class ContactForm extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { name: "", email: "", message: "" };
+    this.state = { name: "", email: "", message: "", submitButtonValue: "Submit", isSubmitted: false };
   }
 
   encode = (data) => {
@@ -14,33 +14,48 @@ class ContactForm extends React.Component {
   }
 
   handleSubmit = e => {
+    this.setState({ submitButtonValue: "Submitting..." });
     fetch("/", {
       method: "POST",
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
       body: this.encode({ "form-name": "contact", ...this.state }),
     })
-      .then(() => alert("Success"))
-      .catch(() => alert("error"));
+      .then(
+        () => {
+          this.setState({ submitButtonValue: "Submitted", isSubmitted: true });
+          console.log("Form submitted")
+        }
+      )
+      .catch((error) => alert(error));
     e.preventDefault();
   }
 
   handleChange = e => this.setState({ [e.target.name]: [e.target.value] })
 
   render() {
-    const { name, email, message } = this.state;
+    const { name, email, message, submitButtonValue, isSubmitted } = this.state;
     return (
       <form className={styles.form} onSubmit={this.handleSubmit}>
         <input type="hidden" name="form-name" value="contact" />
         <div>
-          <label className={styles.form__label}>Name: <input className={styles.form__input} type="text" name="name" value={name} onChange={this.handleChange}></input></label>
+          <label className={styles.form__label}>Name: <input className={styles.form__input} type="text" name="name" value={name} onChange={this.handleChange} required></input></label>
         </div>
         <div>
-          <label className={styles.form__label}>Email: <input className={styles.form__input} type="email" name="email" value={email} onChange={this.handleChange}></input></label>
+          <label className={styles.form__label}>Email: <input className={styles.form__input} type="email" name="email" value={email} onChange={this.handleChange} required></input></label>
         </div>
         <div>
-          <label className={styles.form__label}>Message: <textarea rows="5" className={styles.form__input} name="message" value={message} onChange={this.handleChange}></textarea></label>
+          <label className={styles.form__label}>Message: <textarea rows="5" className={styles.form__input} name="message" value={message} onChange={this.handleChange} required /></label>
         </div>
-        <input className={styles.form__submit} type="submit" value="Submit" />
+        <input className={styles.form__submit} type="submit" value={submitButtonValue} disabled={isSubmitted} />
+        <div>
+          {
+            isSubmitted ? (
+              <div>Thanks for getting in contact! I'll be in touch with you soon.</div>
+            ) : (
+                null
+              )
+          }
+        </div>
       </form>
     )
   }
