@@ -12,22 +12,15 @@
   margin: 0.5rem 1rem;
 }
 
-/* .mainMenu__item:first-of-type {
-  margin: 0.5rem 1rem 0 0;
-}
-
-.mainMenu__item:last-of-type {
-  margin: 0.5rem 0 0 1rem;
-} */
-
 .mainMenu__link {
   color: #181818;
   text-decoration: none;
 }
 
+.mainMenu__link:focus,
 .mainMenu__link:hover {
-  color: #181818;
-  text-decoration: underline;
+  border-bottom: 3px hsl(28, 100%, 58%) solid;
+  text-decoration: none;
 }
 
 .mainMenu__button {

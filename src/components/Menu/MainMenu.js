@@ -9,22 +9,22 @@ class MainMenu extends React.Component {
       <nav>
         <ul className={mainMenuStyles.mainMenu}>
           <li className={mainMenuStyles.mainMenu__item}>
-            <Link className={mainMenuStyles.mainMenu__link} to="/">
+            <Link className={mainMenuStyles.mainMenu__link} to="/" activeStyle={{ borderBottom: "3px hsl(28, 100%, 58%) solid" }}>
               Home
                 </Link>
           </li>
           <li className={mainMenuStyles.mainMenu__item}>
-            <Link className={mainMenuStyles.mainMenu__link} to="/about">
+            <Link className={mainMenuStyles.mainMenu__link} to="/about" activeStyle={{ borderBottom: "3px hsl(28, 100%, 58%) solid" }}>
               About
                 </Link>
           </li>
           <li className={mainMenuStyles.mainMenu__item}>
-            <Link className={mainMenuStyles.mainMenu__link} to="/blog">
+            <Link className={mainMenuStyles.mainMenu__link} to="/blog" activeStyle={{ borderBottom: "3px hsl(28, 100%, 58%) solid" }}>
               Blog
                 </Link>
           </li>
           <li className={mainMenuStyles.mainMenu__item}>
-            <Link className={mainMenuStyles.mainMenu__link} to="/#contact">
+            <Link className={mainMenuStyles.mainMenu__link} to="/#contact" activeStyle={{ borderBottom: "3px hsl(28, 100%, 58%) solid" }}>
               Contact
                 </Link>
           </li>
