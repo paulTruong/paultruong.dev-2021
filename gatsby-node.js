@@ -43,8 +43,8 @@ exports.createPages = async ({ graphql, actions }) => {
             status
             template
             format
-            slug
             content
+            date(formatString: "Do MMMM YYYY")
           }
         }
       }
@@ -87,12 +87,13 @@ exports.createPages = async ({ graphql, actions }) => {
   // The Post ID is prefixed with 'POST_'
   allWordpressPost.edges.forEach(edge => {
     createPage({
-      path: `/${edge.node.slug}/`,
+      path: `/blog/${edge.node.slug}/`,
       component: slash(postTemplate),
       context: {
         id: edge.node.id,
         content: edge.node.content,
-        title: edge.node.title
+        title: edge.node.title,
+        date: edge.node.date,
       },
     })
   })

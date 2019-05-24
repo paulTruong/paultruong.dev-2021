@@ -14,7 +14,7 @@ const Blog = ({ data }) => (
 
     {data.allWordpressPost.edges.map(({ node }) => (
       <div key={node.id}>
-        <Link to={node.slug}>
+        <Link to={`/blog/${node.slug}/`}>
           <h3>{node.title}</h3>
         </Link>
         <p>Published: {node.date}</p>
