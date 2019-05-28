@@ -4,7 +4,7 @@ import styles from "./ContactForm.module.css"
 class ContactForm extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { name: "", email: "", message: "", submitButtonValue: "Submit", isSubmitted: false };
+    this.state = { name: "", email: "", message: "", topic: "", submitButtonValue: "Submit", isSubmitted: false };
   }
 
   encode = (data) => {
@@ -45,7 +45,7 @@ class ContactForm extends React.Component {
         </div>
         <div className={styles.form__field}>
           <label for="topic" className={styles.form__label}>What are you after?</label>
-          <select name="topic" className={styles.form__input}>
+          <select name="topic" className={styles.form__input} onChange={this.handleChange}>
             <option value="general">General inquiry</option>
             <option value="website">A web project</option>
             <option value="accessibility">Accessibility</option>
