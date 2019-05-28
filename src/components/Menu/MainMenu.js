@@ -9,22 +9,22 @@ class MainMenu extends React.Component {
       <nav>
         <ul className={mainMenuStyles.mainMenu}>
           <li className={mainMenuStyles.mainMenu__item}>
-            <Link className={mainMenuStyles.mainMenu__link} to="/" activeStyle={{ borderBottom: "3px hsl(28, 100%, 58%) solid" }}>
+            <Link className={mainMenuStyles.mainMenu__link} to="/" activeClassName={mainMenuStyles.mainMenu__link_active}>
               Home
                 </Link>
           </li>
           <li className={mainMenuStyles.mainMenu__item}>
-            <Link className={mainMenuStyles.mainMenu__link} to="/about" activeStyle={{ borderBottom: "3px hsl(28, 100%, 58%) solid" }}>
+            <Link className={mainMenuStyles.mainMenu__link} to="/about" activeClassName={mainMenuStyles.mainMenu__link_active}>
               About
                 </Link>
           </li>
           <li className={mainMenuStyles.mainMenu__item}>
-            <Link className={mainMenuStyles.mainMenu__link} to="/blog" activeStyle={{ borderBottom: "3px hsl(28, 100%, 58%) solid" }}>
+            <Link className={mainMenuStyles.mainMenu__link} to="/blog" activeClassName={mainMenuStyles.mainMenu__link_active}>
               Blog
                 </Link>
           </li>
           <li className={mainMenuStyles.mainMenu__item}>
-            <Link className={mainMenuStyles.mainMenu__link} to="/#contact" activeStyle={{ borderBottom: "3px hsl(28, 100%, 58%) solid" }}>
+            <Link className={mainMenuStyles.mainMenu__link} to="/#contact" activeClassName={mainMenuStyles.mainMenu__link_active}>
               Contact
                 </Link>
           </li>

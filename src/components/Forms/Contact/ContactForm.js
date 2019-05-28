@@ -37,13 +37,22 @@ class ContactForm extends React.Component {
     return (
       <form className={styles.form} onSubmit={this.handleSubmit}>
         <input type="hidden" name="form-name" value="contact" />
-        <div>
+        <div className={styles.form__field}>
           <label className={styles.form__label}>Name: <input className={styles.form__input} type="text" name="name" value={name} onChange={this.handleChange} required></input></label>
         </div>
-        <div>
+        <div className={styles.form__field}>
           <label className={styles.form__label}>Email: <input className={styles.form__input} type="email" name="email" value={email} onChange={this.handleChange} required></input></label>
         </div>
-        <div>
+        <div className={styles.form__field}>
+          <label for="topic" className={styles.form__label}>What are you after?</label>
+          <select name="topic" className={styles.form__input}>
+            <option value="general">General inquiry</option>
+            <option value="website">A web project</option>
+            <option value="accessibility">Accessibility</option>
+            <option value="hi">Just saying hi</option>
+          </select>
+        </div>
+        <div className={styles.form__field}>
           <label className={styles.form__label}>Message: <textarea rows="5" className={styles.form__input} name="message" value={message} onChange={this.handleChange}></textarea></label>
         </div>
         <input className={styles.form__submit} type="submit" value={submitButtonValue} disabled={isSubmitted} />

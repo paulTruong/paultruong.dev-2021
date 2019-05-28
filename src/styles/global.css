@@ -21,7 +21,7 @@
 }
 
 html {
-  font-family: "Ubuntu", "Times New Roman", Times, serif;
+  font-family: "Ubuntu", "Arial", sans-serif;
   font-size: 100%;
   font-size: 1rem;
   line-height: 1.5;
@@ -55,7 +55,7 @@ img {
   width: 100%;
   height: auto;
 }
-
+/* Ratio is perfect fourth (1.333) */
 p {
   margin-bottom: 1.25rem;
 }
@@ -93,6 +93,9 @@ small,
 
   main {
     padding: 0;
+    animation-delay: 200ms;
+    opacity: 0;
+    animation: fadeIn 500ms ease-out forwards;
   }
 
   h1,

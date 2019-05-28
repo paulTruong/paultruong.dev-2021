@@ -5,11 +5,17 @@
 
 .header__title {
   font-family: "Grold", "Impact", "Charcoal", sans-serif;
-  font-size: 2.369rem;
+  font-size: 1.777rem;
   font-weight: bold;
   color: black;
-  padding: 0 0 0 2rem;
+  padding: 0 0 0 1rem;
   text-decoration: none;
+}
+
+@media only screen and (min-width: 350px) {
+  .header__title {
+    font-size: 2.369rem;
+  }
 }
 
 @media only screen and (min-width: 700px) {

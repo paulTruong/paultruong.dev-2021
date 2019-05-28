@@ -4,8 +4,7 @@ import SEO from "../components/seo"
 import { graphql } from "gatsby";
 import ServiceBlock from "../components/Services/ServiceBlock";
 import ContactForm from "../components/Forms/Contact/ContactForm"
-import indexStyles from "./styles/index.module.css";
-// import Img from "gatsby-image";
+import indexStyles from "./styles/index.module.css"
 
 const IndexPage = ({ data }) => (
   <Layout mainClass="main_home">
@@ -16,16 +15,13 @@ const IndexPage = ({ data }) => (
       console.log(data.allWordpressPage.edges[0].node.acf.wordpress_fields_page[1].image.source_url)
     }
     <SEO title={data.allWordpressPage.edges[0].node.title} keywords={[`gatsby`, `application`, `react`]} />
-    <div className={indexStyles.hero}>
-      <div className={indexStyles.hero__text}>
-        <div className={indexStyles.hero__tagline} dangerouslySetInnerHTML={{ __html: data.allWordpressPage.edges[0].node.acf.wordpress_fields_page[0].tagline }}></div>
-        <div dangerouslySetInnerHTML={{ __html: data.allWordpressPage.edges[0].node.acf.wordpress_fields_page[2].text_block }}></div>
-      </div>
-    </div>
-    <img className={indexStyles.hero__image} src={data.allWordpressPage.edges[0].node.acf.wordpress_fields_page[1].image.source_url} alt="" />
+    <section className={indexStyles.hero__section}>
+      <div className={indexStyles.hero__tagline} dangerouslySetInnerHTML={{ __html: data.allWordpressPage.edges[0].node.acf.wordpress_fields_page[0].tagline }}></div>
+      <div className={indexStyles.hero__text} dangerouslySetInnerHTML={{ __html: data.allWordpressPage.edges[0].node.acf.wordpress_fields_page[2].text_block }}></div>
+      <img className={indexStyles.hero__image} src={data.allWordpressPage.edges[0].node.acf.wordpress_fields_page[1].image.source_url} alt="" />
+    </section>
     <div className={indexStyles.home__services}>
       <h2 className={indexStyles.home__services_heading}>{data.allWordpressPage.edges[0].node.acf.wordpress_fields_page[3].heading}</h2>
-      {/* <div className={indexStyles.home__services_serviceBlock}> */}
       {
         data.allWordpressPage.edges[0].node.acf.wordpress_fields_page[4].service_block.map((serviceBlock) => {
           return <ServiceBlock key={serviceBlock.title} title={serviceBlock.title} text={serviceBlock.text} />
@@ -36,8 +32,9 @@ const IndexPage = ({ data }) => (
     </div>
     <h2 id="contact" className={indexStyles.home__heading}>Contact me</h2>
     <div className={indexStyles.contact__text}>
-      <p>Starting a new web project? Need of some accessibility help for an existing site?</p>
-      <p>Send me an email or fill out the contact form and we can organise a chat to see what I can do for you.</p>
+      <h3>Availability</h3>
+      <p>Right now most of my time is spent with Diabetes Australia. But if you have a smaller project or need a little extra help with your website in either accessibilty or Wordpress, I'd love to hear from you.</p>
+      <p>Just fill out the contact form and we can organise a chat to see what I can do for you.</p>
     </div>
     <ContactForm />
 

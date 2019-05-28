@@ -1,27 +1,12 @@
-import { Link } from "gatsby"
 import React from "react"
 import footerStyles from "./footer.module.css"
+import MainMenu from "../Menu/MainMenu"
 
 class Footer extends React.Component {
     render() {
         return (
             <footer className={footerStyles.footer}>
-                <nav>
-                    <ul className={footerStyles.footerMenu}>
-                        <li className={footerStyles.footerMenu__item}>
-                            <Link className={footerStyles.footerMenu__link} to="/">Home</Link>
-                        </li>
-                        <li className={footerStyles.footerMenu__item}>
-                            <Link className={footerStyles.footerMenu__link} to="/about">About</Link>
-                        </li>
-                        <li className={footerStyles.footerMenu__item}>
-                            <Link className={footerStyles.footerMenu__link} to="/blog">Blog</Link>
-                        </li>
-                        <li className={footerStyles.footerMenu__item}>
-                            <Link className={footerStyles.footerMenu__link} to="/#contact">Contact</Link>
-                        </li>
-                    </ul>
-                </nav>
+                <MainMenu></MainMenu>
                 <p className={footerStyles.footer__text}>Built in Gatsby and Wordpress</p>
             </footer>
         )

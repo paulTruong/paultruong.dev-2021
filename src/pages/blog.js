@@ -6,10 +6,7 @@ import styles from "../pages/styles/writing.module.css"
 
 const Blog = ({ data }) => (
   <Layout mainClass={styles.main_writing}>
-    <SEO title="About me" keywords={[`gatsby`, `application`, `react`]} />
-    {
-      console.log(data.allWordpressPost.edges)
-    }
+    <SEO title="Blog" keywords={[`gatsby`, `application`, `react`]} />
     <h2>Latest Posts</h2>
 
     {data.allWordpressPost.edges.map(({ node }) => (
