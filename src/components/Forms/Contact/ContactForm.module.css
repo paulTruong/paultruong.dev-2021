@@ -6,24 +6,21 @@
 }
 
 .form__input {
-  margin: 0 0 1rem 0;
-}
-
-.form__input {
   font-family: "Ubuntu", "Times New Roman", Times, serif;
   display: block;
   width: 100%;
-  font-size: 1.5rem;
+  font-size: 1rem;
   border: none;
   background: hsl(206, 0%, 95%);
   padding: 1rem;
+  margin: 0 0 1rem 0;
 }
 .form__submit:disabled:hover,
 .form__submit {
   font-family: "Grold", "Impact", "Charcoal", sans-serif;
   text-transform: uppercase;
   padding: 1rem 2rem;
-  font-size: 1.5rem;
+  font-size: 1.333rem;
   font-weight: bold;
   border: solid 2px hsl(206, 100%, 0%);
   color: hsl(206, 100%, 100%);
@@ -35,4 +32,13 @@
 .form__submit:hover {
   background: hsl(206, 100%, 100%);
   color: hsl(206, 100%, 0%);
+}
+
+@media only screen and (min-width: 700px) {
+  .form__input {
+    font-size: 1.333rem;
+  }
+  .form__submit {
+    font-size: 1.333rem;
+  }
 }

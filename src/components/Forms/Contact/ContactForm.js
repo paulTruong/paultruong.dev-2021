@@ -33,7 +33,7 @@ class ContactForm extends React.Component {
   handleChange = e => this.setState({ [e.target.name]: [e.target.value] })
 
   render() {
-    const { name, email, message, submitButtonValue, isSubmitted } = this.state;
+    const { name, email, message, topic, submitButtonValue, isSubmitted } = this.state;
     return (
       <form className={styles.form} onSubmit={this.handleSubmit}>
         <input type="hidden" name="form-name" value="contact" />
@@ -45,7 +45,7 @@ class ContactForm extends React.Component {
         </div>
         <div className={styles.form__field}>
           <label for="topic" className={styles.form__label}>What are you after?</label>
-          <select name="topic" className={styles.form__input} onChange={this.handleChange}>
+          <select name="topic" value={topic} className={styles.form__input} onChange={this.handleChange}>
             <option value="general">General inquiry</option>
             <option value="website">A web project</option>
             <option value="accessibility">Accessibility</option>
