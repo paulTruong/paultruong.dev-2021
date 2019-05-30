@@ -44,8 +44,8 @@ class ContactForm extends React.Component {
           <label className={styles.form__label}>Email: <input className={styles.form__input} type="email" name="email" value={email} onChange={this.handleChange} required></input></label>
         </div>
         <div className={styles.form__field}>
-          <label for="topic" className={styles.form__label}>What are you after?</label>
-          <select name="topic" value={topic} className={styles.form__input} onChange={this.handleChange}>
+          <label for="form__select_topic" className={styles.form__label}>What are you after?</label>
+          <select id="form__select_topic" name="topic" value={topic} className={styles.form__input} onChange={this.handleChange}>
             <option value="general">General inquiry</option>
             <option value="website">A web project</option>
             <option value="accessibility">Accessibility</option>
