@@ -32,9 +32,9 @@ const IndexPage = ({ data }) => (
     </div>
     <h2 id="contact" className={indexStyles.home__heading}>Contact me</h2>
     <div className={indexStyles.contact__text}>
-      <h3>Availability</h3>
-      <p>Right now most of my time is spent with Diabetes Australia. But if you have a smaller project or need a little extra help with your website in either accessibilty or Wordpress, I'd love to hear from you.</p>
-      <p>Just fill out the contact form and we can organise a chat to see what I can do for you.</p>
+      <h3>Availability - small projects and helping hand</h3>
+      <p>Right now I am available for around 20 hours a week. Perfect if you have a smaller project or need a little extra help with your website.</p>
+      <p>Just fill out the contact form or send me an <a href="mailto:paul@paultruong.dev">email</a> and we can organise a chat to see what I can do for you.</p>
     </div>
     <ContactForm />
 

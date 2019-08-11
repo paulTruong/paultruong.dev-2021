@@ -60,6 +60,10 @@ p {
   margin-bottom: 1.25rem;
 }
 
+a:hover {
+  color: #ff8d29;
+}
+
 h1 {
   margin-top: 0;
   font-size: 3.157rem;
